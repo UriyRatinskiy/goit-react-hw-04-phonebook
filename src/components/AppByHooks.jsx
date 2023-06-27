@@ -6,7 +6,7 @@ import Filter from './Filter/Filter';
 import { nanoid } from 'nanoid';
 import { Application, ApplicationTitle, ListTitle } from './App.styled';
 
-const AppByHooks = () => {
+const Contacts = () => {
   const [contacts, setContacts] = useLocalStorege('contacts', []);
   const [filter, setFilter] = useState('');
 
@@ -61,4 +61,4 @@ const AppByHooks = () => {
   );
 };
 
-export default AppByHooks;
+export default Contacts;
