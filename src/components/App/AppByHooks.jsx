@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import useLocalStorage from '../../hooks/useLocalStorage';
+import useLocalStorege from '../../hooks/useLocalStorage';
 import ContactFormByHooks from '../ContactForm/ContactFormByHooks';
 import ContactList from '../ContactList/ContactList';
 import Filter from '../Filter/Filter';
@@ -7,7 +7,7 @@ import { nanoid } from 'nanoid';
 import { Application, ApplicationTitle, ListTitle } from './App.styled';
 
 const Contacts = () => {
-  const [contacts, setContacts] = useLocalStorage('contacts', []);
+  const [contacts, setContacts] = useLocalStorege('contacts', []);
   const [filter, setFilter] = useState('');
 
   const isContactNameInList = contactName => {
@@ -35,7 +35,6 @@ const Contacts = () => {
     setContacts(prevState => prevState.filter(({ id }) => id !== userId));
   };
 
-  // Filter Zone
   const changeFilter = event => {
     setFilter(event.currentTarget.value);
   };
